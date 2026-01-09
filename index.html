@@ -159,7 +159,6 @@
         form.addEventListener('submit', function(event){
             // Prevent the form from actually submitting (which would refresh the page)
             event.preventDefault();
-        });
 
         //Get values from each input field
         let nameValue = document.getElementById('name').value;
@@ -168,11 +167,19 @@
         let hobbyValue = document.getElementById('hobby').value;
         let messageValue = document.getElementById('message').value;
 
+        // Display the values in the output div
+            document.getElementById('displayName').textContent = nameValue;
+            document.getElementById('displayAge').textContent = ageValue;
+            document.getElementById('displayHometown').textContent = hometownValue;
+            document.getElementById('displayHobby').textContent = hobbyValue;
+            document.getElementById('displayMessage').textContent = messageValue;
+
         //make the output visible
         outputDiv.style.display = 'block';
 
         //optional: scroll to the output
         outputDiv.scrollIntoView({ behavior: 'smooth'})
+        })
     </script>
 </body>
 </html>
